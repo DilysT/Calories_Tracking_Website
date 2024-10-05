@@ -1,0 +1,41 @@
+.dashboard {
+  padding: 20px;
+  margin-left: 240px; /* Đặt dashboard bắt đầu từ viền phải của sidebar */
+  width: calc(100% - 240px); /* Trừ phần width của sidebar */
+  display: flex;
+  flex-direction: column;
+  background-color: #F2F5FD;
+  height: 100vh;
+}
+
+.energy-summary {
+  display: flex;
+  justify-content: space-around;
+}
+
+.energy-item {
+  text-align: center;
+}
+
+.macro-targets {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.macro-item {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    margin-left: 0; /* Khi ở màn hình nhỏ hơn thì dashboard sẽ chiếm toàn bộ chiều rộng */
+    width: 100%; /* Đặt dashboard full-width khi sidebar không hiển thị */
+  }
+
+  .energy-summary,
+  .macro-targets {
+    flex-direction: column;
+    align-items: center;
+  }
+}
